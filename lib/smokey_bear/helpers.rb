@@ -58,7 +58,7 @@ module SmokeyBear
       end
       @response = ResponseDelegate.new response
     rescue RestClient::Exception => e
-      @response = e.response
+      @response = ResponseDelegate.new e.response
     end
 
   end
